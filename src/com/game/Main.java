@@ -1,6 +1,7 @@
 package com.game;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     /**
@@ -12,8 +13,12 @@ public class Main {
      * @version 1.0
      */
     public static void main(String[] args) {
+        // vars for input and random functions
         Scanner input = new Scanner(System.in);
-        int number = 8, guess, countGuess = 0, maxGuess = 3;
+        Random rand = new Random();
+        
+        // variables
+        int number = rand.nextInt(10), guess, countGuess = 0, maxGuess = 3;
         boolean outOfGuess = false;
 
         while (!outOfGuess) {
